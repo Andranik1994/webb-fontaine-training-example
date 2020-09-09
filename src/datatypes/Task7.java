@@ -11,18 +11,10 @@ public class Task7 extends DataTypesDemo {
         System.out.print("Input 3th number: ");
         int thirdNum = scanner.nextInt();
         int max;
-        if (firstNum >= secondNum) {
-            if (firstNum >= thirdNum) {
-                max = firstNum;
-            } else {
-                max = thirdNum;
-            }
+        if (firstNum >= secondNum && firstNum >= thirdNum) {
+            max = firstNum;
         } else {
-            if (secondNum >= thirdNum) {
-                max = secondNum;
-            } else {
-                max = thirdNum;
-            }
+            max = Math.max(secondNum, thirdNum);
         }
         System.out.println("The greatest: " + max);
         System.out.println();

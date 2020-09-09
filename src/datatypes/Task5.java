@@ -21,8 +21,12 @@ public class Task5 extends DataTypesDemo {
                 System.out.printf("%d %s %d = %d", fNum, operation, sNum, fNum * sNum);
                 break;
             case '/':
-                float answer = (float) fNum / sNum;
-                System.out.printf("%d %s %d = %.2f", fNum, operation, sNum, answer);
+                if (sNum != 0) {
+                    float answer = (float) fNum / sNum;
+                    System.out.printf("%d %s %d = %.2f", fNum, operation, sNum, answer);
+                } else {
+                    System.out.println("Can not dividing by 0");
+                }
                 break;
             case '%':
                 System.out.printf("%d %s %d = %d", fNum, operation, sNum, fNum % sNum);

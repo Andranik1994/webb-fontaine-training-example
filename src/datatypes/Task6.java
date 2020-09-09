@@ -17,7 +17,7 @@ public class Task6 extends DataTypesDemo {
         double y2 = scanner.nextDouble();
         System.out.print("Input a second city Z coordinate: ");
         double z2 = scanner.nextDouble();
-        float distance = (float) Math.pow((Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2)), 0.5);
+        float distance = (float) Math.sqrt((Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2)));
         System.out.println("The distance between 2 cities = " + distance);
         double mPointX = (x1 + x2) / 2;
         double mPointY = (y1 + y2) / 2;
