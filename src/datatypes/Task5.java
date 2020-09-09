@@ -29,7 +29,11 @@ public class Task5 extends DataTypesDemo {
                 }
                 break;
             case '%':
-                System.out.printf("%d %s %d = %d", fNum, operation, sNum, fNum % sNum);
+                if (sNum != 0) {
+                    System.out.printf("%d %s %d = %d", fNum, operation, sNum, fNum % sNum);
+                } else {
+                    System.out.println("Can not dividing by 0");
+                }
                 break;
             default:
                 System.out.println("There is no '" + operation + "' operation.");
