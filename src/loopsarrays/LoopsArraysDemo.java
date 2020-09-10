@@ -16,11 +16,11 @@ public class LoopsArraysDemo {
         }
     }
 
-    public static int getArrayLengthPositiveInteger(String message) {
+    public static int getPositiveInteger(String message) {
         int length;
         do {
             System.out.print(message);
-            checkInputInt("Array Length can be only Integer and Positive !!! Try again. ");
+            checkInputInt("Number can be only Integer and Positive !!! Try again. ");
             length = scanner.nextInt();
         } while (length <= 0);
         return length;
@@ -71,6 +71,13 @@ public class LoopsArraysDemo {
         return finalArray;
     }
 
+    public static int[] addNumberToBeginningOfIntArray(int size, int[] array, int number) {
+        int[] finalArray = new int[size + 1];
+        for (int i = 0; i < size; ++i) {
+            finalArray[i+1] = array[i];
+        }
+        finalArray[0] = number;
 
-
+        return finalArray;
+    }
 }
