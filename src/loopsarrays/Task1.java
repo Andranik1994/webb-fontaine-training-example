@@ -5,7 +5,7 @@ public class Task1 extends LoopsArraysDemo {
     public static void main(String[] args) {
         System.out.println("---Task_1---");
 
-        int arrayLength = getArrayLengthPositiveInteger("Input Positive Array Length ");
+        int arrayLength = getPositiveInteger("Input Positive Array Length ");
 
         int[] array = new int[arrayLength];
         int[] reversedArray = new int[arrayLength];

@@ -5,8 +5,8 @@ public class Task3 extends LoopsArraysDemo {
     public static void main(String[] args) {
         System.out.println("---Task_3---");
 
-        int firstArrayLength = getArrayLengthPositiveInteger("Input Positive First Array Length ");
-        int secondArrayLength = getArrayLengthPositiveInteger("Input Positive Second Array Length ");
+        int firstArrayLength = getPositiveInteger("Input Positive First Array Length ");
+        int secondArrayLength = getPositiveInteger("Input Positive Second Array Length ");
 
         double[] array1 = new double[firstArrayLength];
         for (int i = 0; i < array1.length; ++i) {
@@ -34,7 +34,7 @@ public class Task3 extends LoopsArraysDemo {
                 }
             }
             if (flag) {
-                finalArray = addUnicNumberToDoubleArray(finalArray.length,finalArray,array1[i]);
+                finalArray = addUnicNumberToDoubleArray(finalArray,array1[i]);
             }
         }
 

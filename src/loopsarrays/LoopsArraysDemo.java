@@ -37,44 +37,44 @@ public class LoopsArraysDemo {
         }
     }
 
-    public static double[] addUnicNumberToDoubleArray(int size, double[] array, double number) {
+    public static double[] addUnicNumberToDoubleArray(double[] array, double number) {
 
-        for (int i = 0; i < size; ++i) {
+        for (int i = 0; i < array.length; ++i) {
             if (array[i] == number) {
                 return array;
             }
         }
 
-        double[] finalArray = new double[size + 1];
-        for (int i = 0; i < size; ++i) {
+        double[] finalArray = new double[array.length + 1];
+        for (int i = 0; i < array.length; ++i) {
             finalArray[i] = array[i];
         }
-        finalArray[size] = number;
+        finalArray[array.length] = number;
 
         return finalArray;
     }
 
-    public static int[] addUnicNumberToIntArray(int size, int[] array, int number) {
+    public static int[] addUnicNumberToIntArray(int[] array, int number) {
 
-        for (int i = 0; i < size; ++i) {
+        for (int i = 0; i < array.length; ++i) {
             if (array[i] == number) {
                 return array;
             }
         }
 
-        int[] finalArray = new int[size + 1];
-        for (int i = 0; i < size; ++i) {
+        int[] finalArray = new int[array.length + 1];
+        for (int i = 0; i < array.length; ++i) {
             finalArray[i] = array[i];
         }
-        finalArray[size] = number;
+        finalArray[array.length] = number;
 
         return finalArray;
     }
 
-    public static int[] addNumberToBeginningOfIntArray(int size, int[] array, int number) {
-        int[] finalArray = new int[size + 1];
-        for (int i = 0; i < size; ++i) {
-            finalArray[i+1] = array[i];
+    public static int[] addNumberToBeginningOfIntArray(int[] array, int number) {
+        int[] finalArray = new int[array.length + 1];
+        for (int i = 0; i < array.length; ++i) {
+            finalArray[i + 1] = array[i];
         }
         finalArray[0] = number;
 

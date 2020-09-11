@@ -5,7 +5,7 @@ public class Task4 extends LoopsArraysDemo {
     public static void main(String[] args) {
         System.out.println("---Task_4---");
 
-        int arrayLength = getArrayLengthPositiveInteger("Input Positive Array Length ");
+        int arrayLength = getPositiveInteger("Input Positive Array Length ");
 
         int[] array = new int[arrayLength];
         for (int i = 0; i < array.length; ++i) {
@@ -14,7 +14,7 @@ public class Task4 extends LoopsArraysDemo {
             array[i] = scanner.nextInt();
         }
 
-        int k = getArrayLengthPositiveInteger("Enter Positive K number ");
+        int k = getPositiveInteger("Enter Positive K number ");
 
         int calculator;
         int[] finalArray = new int[0];
@@ -32,7 +32,7 @@ public class Task4 extends LoopsArraysDemo {
                 }
             }
             if (calculator == k) {
-                finalArray = addUnicNumberToIntArray(finalArray.length, finalArray, array[i]);
+                finalArray = addUnicNumberToIntArray(finalArray, array[i]);
             }
         }
 
