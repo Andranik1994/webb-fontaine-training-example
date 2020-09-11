@@ -26,6 +26,16 @@ public class LoopsArraysDemo {
         return length;
     }
 
+    public static int getIntegerFromZero(String message) {
+        int length;
+        do {
+            System.out.print(message);
+            checkInputInt("Number can be only Integer and >= 0 !!! Try again. ");
+            length = scanner.nextInt();
+        } while (length < 0);
+        return length;
+    }
+
     public static void checkInputDouble(String warningMessage) {
         while (true) {
             if (!scanner.hasNextDouble()) {
@@ -80,4 +90,21 @@ public class LoopsArraysDemo {
 
         return finalArray;
     }
+
+    public static int[] removeIndexFromIntArray(int[] array, int index) {
+        int[] finalArray = new int[array.length - 1];
+        int k = 0;
+
+        for (int i = 0; i < array.length; ++i) {
+            if (i == index) {
+                continue;
+            }
+            finalArray[k] = array[i];
+            ++k;
+        }
+
+        return finalArray;
+    }
+
+
 }

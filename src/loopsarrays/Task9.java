@@ -14,7 +14,30 @@ public class Task9 extends LoopsArraysDemo {
             array[i] = scanner.nextInt();
         }
 
-        
+        int numberWhichWillBeDeleted;
+        do {
+           numberWhichWillBeDeleted = getIntegerFromZero("Input Index which will be deleted ");
+        } while (numberWhichWillBeDeleted >= arrayLength);
+
+        for (int i = 0; i < array.length; ++i) {
+            if (i != array.length - 1) {
+                System.out.printf("%d, ", array[i]);
+            } else {
+                System.out.printf("%d", array[i]);
+            }
+        }
+
+        System.out.println();
+
+        array = removeIndexFromIntArray(array, numberWhichWillBeDeleted);
+
+        for (int i = 0; i < array.length; ++i) {
+            if (i != array.length - 1) {
+                System.out.printf("%d, ", array[i]);
+            } else {
+                System.out.printf("%d", array[i]);
+            }
+        }
 
         System.out.println();
     }
