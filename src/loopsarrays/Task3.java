@@ -1,46 +1,46 @@
 package loopsarrays;
 
-public class Task3 extends LoopsArraysDemo {
+public class Task3 {
 
     public static void main(String[] args) {
         System.out.println("---Task_3---");
 
-        int firstArrayLength = getPositiveInteger("Input Positive First Array Length ");
-        int secondArrayLength = getPositiveInteger("Input Positive Second Array Length ");
+        int firstArrayLength = LoopsArraysDemo.getPositiveInteger("Input Positive First Array Length ");
+        int secondArrayLength = LoopsArraysDemo.getPositiveInteger("Input Positive Second Array Length ");
 
         double[] array1 = new double[firstArrayLength];
         for (int i = 0; i < array1.length; ++i) {
             System.out.printf("Input Array1[%d] ", i);
-            checkInputDouble(String.format("Array1[%d] can be only Double. Try again. Input array1[%d] ", i, i));
-            array1[i] = scanner.nextDouble();
+            LoopsArraysDemo.checkInputDouble(String.format("Array1[%d] can be only Double. Try again. Input array1[%d] ", i, i));
+            array1[i] = LoopsArraysDemo.scanner.nextDouble();
         }
 
         double[] array2 = new double[secondArrayLength];
         for (int i = 0; i < array2.length; ++i) {
             System.out.printf("Input Array2[%d] ", i);
-            checkInputDouble(String.format("Array2[%d] can be only Double. Try again. Input array2[%d] ", i, i));
-            array2[i] = scanner.nextDouble();
+            LoopsArraysDemo.checkInputDouble(String.format("Array2[%d] can be only Double. Try again. Input array2[%d] ", i, i));
+            array2[i] = LoopsArraysDemo.scanner.nextDouble();
         }
 
         double[] finalArray = new double[0];
         boolean flag;
 
-        for (int i = 0; i < array1.length; ++i) {
+        for (double value : array1) {
             flag = true;
-            for (int j = 0; j < array2.length; ++j) {
-                if (array1[i] == array2[j]) {
+            for (double v : array2) {
+                if (value == v) {
                     flag = false;
                     break;
                 }
             }
             if (flag) {
-                finalArray = addUnicNumberToDoubleArray(finalArray,array1[i]);
+                finalArray = LoopsArraysDemo.addUnicNumberToDoubleArray(finalArray, value);
             }
         }
 
-        if (finalArray.length>0) {
-            for (int i = 0; i < finalArray.length; ++i) {
-                System.out.printf("Number %.2f from first array is not occur in second\n", finalArray[i]);
+        if (finalArray.length > 0) {
+            for (double v : finalArray) {
+                System.out.printf("Number %.2f from first array is not occur in second\n", v);
             }
         } else {
             System.out.println("All numbers are repeated.");

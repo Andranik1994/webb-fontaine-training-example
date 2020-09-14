@@ -1,6 +1,6 @@
 package loopsarrays;
 
-public class Task2 extends LoopsArraysDemo {
+public class Task2 {
 
     public static void main(String[] args) {
         System.out.println("---Task_2---");
@@ -9,9 +9,9 @@ public class Task2 extends LoopsArraysDemo {
         double sum = 0;
 
         for (int i = 0; i < array.length; ++i) {
-            System.out.printf("Input Array[%d] ",i);
-            checkInputDouble(String.format("Array[%d] can be only Double. Try again. Input array[%d] ", i, i));
-            array[i] = scanner.nextDouble();
+            System.out.printf("Input Array[%d] ", i);
+            LoopsArraysDemo.checkInputDouble(String.format("Array[%d] can be only Double. Try again. Input array[%d] ", i, i));
+            array[i] = LoopsArraysDemo.scanner.nextDouble();
             sum += array[i];
         }
 

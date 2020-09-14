@@ -1,6 +1,6 @@
 package loopsarrays;
 
-public class Task7 extends LoopsArraysDemo {
+public class Task7 {
 
     public static void main(String[] args) {
         System.out.println("---Task_7---");
@@ -13,8 +13,8 @@ public class Task7 extends LoopsArraysDemo {
         }
 
         System.out.println("---Your Random Array is---");
-        for (int i = 0; i < randomArray.length; ++i) {
-            System.out.println(randomArray[i]);
+        for (int value : randomArray) {
+            System.out.println(value);
         }
 
         boolean flag = true;
@@ -31,8 +31,8 @@ public class Task7 extends LoopsArraysDemo {
             }
         }
         System.out.println("---Your descending Array is---");
-        for (int i = 0; i < randomArray.length; ++i) {
-            System.out.println(randomArray[i]);
+        for (int value : randomArray) {
+            System.out.println(value);
         }
 
         flag = true;
@@ -49,8 +49,8 @@ public class Task7 extends LoopsArraysDemo {
             }
         }
         System.out.println("---Your ascending Array is---");
-        for (int i = 0; i < randomArray.length; ++i) {
-            System.out.println(randomArray[i]);
+        for (int value : randomArray) {
+            System.out.println(value);
         }
 
         System.out.println();
