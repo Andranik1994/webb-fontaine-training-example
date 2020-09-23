@@ -15,7 +15,7 @@ public class Task1 {
         FunctionsObjects.inputDoubleArray(array);
 
         //  Double Array
-        doubleArray(array);
+        doublingArrayValues(array);
 
         //  Print Final Array
         FunctionsObjects.printDoubleArrayWithFormat(array, "#.##");
@@ -24,7 +24,7 @@ public class Task1 {
     }
 
     //  Method Which Double Any Double Array
-    static void doubleArray(double[] array) {
+    static void doublingArrayValues(double[] array) {
         for (int i = 0; i < array.length; ++i) {
             array[i] = array[i] * 2;
         }

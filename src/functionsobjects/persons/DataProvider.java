@@ -10,8 +10,6 @@ public class DataProvider {
 
     public static Company[] companies;
 
-    public static Company company;
-
     static String[] names = {"Peter", "Andrew", "James", "Philip", "Bartholomew", "Matthew", "Thomas", "James", "Simon", "Judas", "Judas Iscariot"};
     static String[] companyNames = {"WF", "Google", "Facebook", "Alibaba", "Picsart", "Majestic", "Yandex", "Mail.ru", "Amazon", "Oracle"};
     static String[] address = {
@@ -70,7 +68,7 @@ public class DataProvider {
         for (int i = 0; i < quantity; ++i) {
             Person person = new Person();
             person.company = FunctionsObjects.getRandomCompanyFrom(provideCompanies(quantity));
-            person.age = (new Random().nextInt(70));
+            person.age = new Random().nextInt(50) + 18;
             person.name = FunctionsObjects.getRandomStringFrom(names);
             people[i] = person;
         }
