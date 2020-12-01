@@ -5,12 +5,16 @@ public class Task1 {
     public static void main(String[] args) {
         System.out.println("---Task_1---");
 
+        // Input word
         String word = StringDemo.scanner.next();
 
-        int number = StringDemo.getIntegerFromZeroToTextLength(word, "Input Index which will be find in String ");
+        // Input index
+        int index = StringDemo.getPositiveInteger("Input Index which will be find in String ");
 
-        System.out.println(word.charAt(number));
+        // Create api object.
+        StringDemo api = new StringDemo();
 
-        System.out.println();
+        // Call api getCharAtIndex method.
+        System.out.println(api.getCharAtIndex(word, index));
     }
 }

@@ -5,11 +5,16 @@ public class Task6 {
     public static void main(String[] args) {
         System.out.println("---Task_6---");
 
+        // Input
         String original = StringDemo.scanner.nextLine();
+
+        // Input specified value
         String values = StringDemo.scanner.nextLine();
 
-        System.out.println(original.startsWith(values));
+        // Create api object.
+        StringDemo api = new StringDemo();
 
-        System.out.println();
+        // Call api checkStartsWith method.
+        System.out.println(api.checkStartsWith(original, values));
     }
 }

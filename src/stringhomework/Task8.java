@@ -1,19 +1,17 @@
 package stringhomework;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 public class Task8 {
 
     public static void main(String[] args) {
         System.out.println("---Task_8---");
 
+        // Input
         String word = StringDemo.scanner.nextLine();
 
-        System.out.println(removeDuplicatedChars(word));
-    }
+        // Create api object.
+        StringDemo api = new StringDemo();
 
-    static String removeDuplicatedChars(String word) {
-        return Arrays.stream(word.split("")).distinct().collect(Collectors.joining());
+        // Call api removeDuplicatedChars method.
+        System.out.println(api.removeDuplicatedChars(word));
     }
 }

@@ -5,12 +5,16 @@ public class Task7 {
     public static void main(String[] args) {
         System.out.println("---Task_7---");
 
-
+        // Input
         String original = StringDemo.scanner.nextLine();
+
+        // Input specified value
         String values = StringDemo.scanner.nextLine();
 
-        System.out.println(original.endsWith(values));
+        // Create api object.
+        StringDemo api = new StringDemo();
 
-        System.out.println();
+        // Call api checkEndsWith method.
+        System.out.println(api.checkEndsWith(original, values));
     }
 }
