@@ -19,10 +19,6 @@ public class Task1 {
         Double distance = API.getDistance(point1, point2);
         System.out.printf("Distance Between Two Points = %.2f \n", distance);
 
-
-
-
-
-
     }
+
 }

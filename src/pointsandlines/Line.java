@@ -25,7 +25,7 @@ public class Line {
     }
 
     public Line(String lineName, Double m, Double b) {
-        if (lineName == null || lineName.isEmpty() || lineName.length() > 2 || !HomeworkHelper.isStringUpperCase(lineName)) {
+        if (lineName == null || lineName.isEmpty() || lineName.length() > 2 || HomeworkHelper.isStringHasLowCase(lineName)) {
             System.out.print(Constants.INPUT_LINE_NAME_FORMAT_WARNING);
             return;
         }
@@ -59,7 +59,7 @@ public class Line {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             String name = scanner.next();
-            if (name == null || name.isEmpty() || name.length() > 2 || !HomeworkHelper.isStringUpperCase(name)) {
+            if (name == null || name.isEmpty() || name.length() > 2 || HomeworkHelper.isStringHasLowCase(name)) {
                 System.out.print(Constants.INPUT_LINE_NAME_FORMAT_WARNING);
                 continue;
             }

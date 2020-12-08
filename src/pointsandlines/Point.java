@@ -10,7 +10,7 @@ public class Point {
 
     public Point(String pointName, Double x, Double y) {
 
-        if (pointName == null || pointName.isEmpty() || pointName.length() > 3 || !HomeworkHelper.isStringUpperCase(pointName)) {
+        if (pointName == null || pointName.isEmpty() || pointName.length() > 3 || HomeworkHelper.isStringHasLowCase(pointName)) {
             System.out.print(Constants.INPUT_POINT_NAME_FORMAT_WARNING);
             return;
         }
@@ -62,7 +62,7 @@ public class Point {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             String name = scanner.next();
-            if (name == null || name.isEmpty() || name.length() > 3 || !HomeworkHelper.isStringUpperCase(name)) {
+            if (name == null || name.isEmpty() || name.length() > 3 || HomeworkHelper.isStringHasLowCase(name)) {
                 System.out.print(Constants.INPUT_POINT_NAME_FORMAT_WARNING);
                 continue;
             }

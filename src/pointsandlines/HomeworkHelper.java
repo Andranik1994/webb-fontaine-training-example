@@ -16,13 +16,13 @@ public class HomeworkHelper {
         }
     }
 
-    public static boolean isStringUpperCase(String str){
+    public static boolean isStringHasLowCase(String str){
         char[] charArray = str.toCharArray();
         for (char c : charArray) {
             if (!Character.isUpperCase(c))
-                return false;
+                return true;
         }
-        return true;
+        return false;
     }
 
 }
