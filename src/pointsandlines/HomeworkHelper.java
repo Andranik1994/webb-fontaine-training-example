@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class HomeworkHelper {
 
+    //  TODO How write test for this?
     public static Double inputDouble(String warningMessage) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -17,6 +18,10 @@ public class HomeworkHelper {
     }
 
     public static boolean isStringHasLowCase(String str){
+        if (str == null || str.isEmpty() || str.isBlank()) {
+            return true;
+        }
+
         char[] charArray = str.toCharArray();
         for (char c : charArray) {
             if (!Character.isUpperCase(c))

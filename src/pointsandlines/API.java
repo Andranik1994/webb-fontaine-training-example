@@ -26,6 +26,7 @@ public class API {
         return new Point(Point.inputPointName(), (point1.getX() + point2.getX()) / 2, (point1.getY() + point2.getY()) / 2);
     }
 
+    //  TODO Test with Inputs.???
     /**
      * @param x1 X1 coordinate
      * @param y1 Y1 coordinate
@@ -128,12 +129,7 @@ public class API {
      * @return is Point In The Line
      */
     private static Boolean checkPointInTheLine(Point point, Line line) {
-        if (point == null) {
-            System.out.println(Constants.SOMETHING_WENT_WRONG);
-            return null;
-        }
-
-        if (line == null) {
+        if (point == null || line == null) {
             System.out.println(Constants.SOMETHING_WENT_WRONG);
             return null;
         }
